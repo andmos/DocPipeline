@@ -1,6 +1,6 @@
 # DocPipeline
 
-Example pipeline for typesetting and building Markdown documentation.
+Example pipeline for typesetting and building `markdown` documentation via `ConTeXt` and `pandoc`.
 
 Slightly simplified version of [Dave Jarvis' guide](https://dave.autonoma.ca/blog/2019/05/22/typesetting-markdown-part-1/).
 

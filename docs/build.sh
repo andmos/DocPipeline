@@ -59,13 +59,16 @@ execute_build() {
 }
 
 validate_requirements() {
-  $log "Check missing software requirements"
+  if [ "$docker" = true ] ; then
+    $log "Running via container. Skipping requirement validation"
+  else
+    $log "Check missing software requirements"
 
-  required context "https://wiki.contextgarden.net"
-  required pandoc "https://www.pandoc.org"
-  required gs "https://www.ghostscript.com"
-
-  return "${REQUIRED_MISSING}"
+    required context "https://wiki.contextgarden.net"
+    required pandoc "https://www.pandoc.org"
+    required gs "https://www.ghostscript.com"
+  fi
+    return "${REQUIRED_MISSING}"
 }
 
 required() {
